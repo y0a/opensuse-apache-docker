@@ -4,9 +4,8 @@
   - [Features](#features)
 - [Quick Start](#quick-start)
 - [Installation](#installation)
-  - [Fig](#fig)
 - [Upgrading](#upgrading)
-
+- [Fig](#fig)
 
 # Introduction
 
@@ -40,20 +39,6 @@ cd opensuse-apache-docker
 docker build -t="$USER/opensuse-apache" .
 ```
 
-## Fig
-
-Build and run using [Fig](http://www.fig.sh)
-
-```bash
-git clone https://github.com/novacoast/opensuse-apache-docker.git
-cd opensuse-apache-docker
-fig build
-fig up
-```
-
-The [webapp](webapp) folder on the host will be mounted into the container's apache root
-
-
 # Upgrading
 
 To upgrade to newer releases, simply follow this 3 step upgrade procedure.
@@ -75,3 +60,16 @@ docker pull novacoast/opensuse-apache:latest
 ```bash
 docker run --name='opensuse-apache' -d -p 80:80 novacoast/opensuse-apache-docker:latest
 ```
+
+# Fig
+
+Build and run using [Fig](http://www.fig.sh)
+
+```bash
+git clone https://github.com/novacoast/opensuse-apache-docker.git
+cd opensuse-apache-docker
+fig build
+fig up
+```
+
+The [webapp](webapp) folder on the host will be mounted into the container's apache root
