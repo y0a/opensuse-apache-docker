@@ -11,6 +11,4 @@ RUN zypper --non-interactive in --recommends \
 
 RUN sed -i 's/variables_order = "GPCS"/variables_order = "EGPCS"/g' /etc/php5/apache2/php.ini
 
-COPY /webapp/* /srv/www/htdocs/
-
 CMD rcapache2 start && tail -f /var/log/apache2/*

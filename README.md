@@ -2,9 +2,11 @@
 
 - [Introduction](#introduction)
   - [Features](#features)
-- [Installation](#installation)
 - [Quick Start](#quick-start)
+- [Installation](#installation)
+  - [Fig](#fig)
 - [Upgrading](#upgrading)
+
 
 # Introduction
 
@@ -15,6 +17,13 @@ Dockerfile to build an OpenSUSE 13.2 container image with apache2 and php5.
 - php5 & common modules
 - php.ini configured to utilize `getenv()`
 
+# Quick Start
+
+Run the opensuse-apache-docker image
+
+```bash
+docker run --name='opensuse-apache' -it --rm -p 80:80 novacoast/opensuse-apache-docker:latest
+```
 # Installation
 
 Pull the latest version of the image from the docker index. These builds are performed by the **Docker Trusted Build** service.
@@ -26,18 +35,24 @@ docker pull novacoast/opensuse-apache:latest
 Alternately you can build the image yourself.
 
 ```bash
-git https://github.com/novacoast/opensuse-apache-docker.git
+git clone https://github.com/novacoast/opensuse-apache-docker.git
 cd opensuse-apache-docker
 docker build -t="$USER/opensuse-apache" .
 ```
 
-# Quick Start
+## Fig
 
-Run the opensuse-apache-docker image
+Build and run using [Fig](http://www.fig.sh)
 
 ```bash
-docker run --name='opensuse-apache' -it --rm -p 80:80 novacoast/opensuse-apache-docker:latest
+git clone https://github.com/novacoast/opensuse-apache-docker.git
+cd opensuse-apache-docker
+fig build
+fig up
 ```
+
+The [webapp](webapp) folder on the host will be mounted into the container's apache root
+
 
 # Upgrading
 
