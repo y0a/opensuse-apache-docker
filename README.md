@@ -26,8 +26,8 @@ docker pull novacoast/opensuse-apache:latest
 Alternately you can build the image yourself.
 
 ```bash
-git clone
-cd dir
+git https://github.com/novacoast/opensuse-apache-docker.git
+cd opensuse-apache-docker
 docker build -t="$USER/opensuse-apache" .
 ```
 
