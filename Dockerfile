@@ -9,4 +9,4 @@ RUN zypper --non-interactive --no-gpg-checks ref; \
 
 RUN sed -i 's/variables_order = "GPCS"/variables_order = "EGPCS"/g' /etc/php5/apache2/php.ini
 
-CMD rcapache2 start && tail -f /var/log/apache2/*
+CMD rcapache2 start && tail -f /var/log/apache2/*.log
