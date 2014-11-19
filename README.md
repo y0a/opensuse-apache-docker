@@ -6,6 +6,7 @@
 - [Installation](#installation)
 - [Upgrading](#upgrading)
 - [Fig](#fig)
+- [Contributing](#contributing)
 
 # Introduction
 
@@ -73,3 +74,9 @@ fig up
 ```
 
 The [webapp](webapp) folder on the host will be mounted into the container's apache root
+
+# Contributing
+
++ Report Issues
++ Open a Pull Request
+
