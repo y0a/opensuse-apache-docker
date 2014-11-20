@@ -11,4 +11,4 @@ RUN sed -i 's/variables_order = "GPCS"/variables_order = "EGPCS"/g' /etc/php5/ap
 
 COPY /webapp/* /srv/www/htdocs/
 
-CMD rcapache2 start && tail -f /var/log/apache2/*.log
+CMD rcapache2 start && tail -f /var/log/apache2/*log
