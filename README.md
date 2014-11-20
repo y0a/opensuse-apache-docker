@@ -1,3 +1,5 @@
+[ ![Codeship Status for novacoast/opensuse-apache-docker](https://codeship.com/projects/b0bd21b0-5274-0132-69f7-72279d09a1d7/status)](https://codeship.com/projects/48655)
+
 # Table of Contents
 
 - [Introduction](#introduction)
@@ -11,8 +13,6 @@
 # Introduction
 
 Dockerfile to build an OpenSUSE 13.2 container image with apache2 and php5.
-
-[ ![Codeship Status for novacoast/opensuse-apache-docker](https://codeship.com/projects/b0bd21b0-5274-0132-69f7-72279d09a1d7/status)](https://codeship.com/projects/48655)
 
 ## Features:
 - Apache2
