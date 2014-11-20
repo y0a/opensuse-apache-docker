@@ -30,6 +30,8 @@ docker run -d -p 80:80 novacoast/opensuse-apache
 
 Pull the latest version of the image from the docker index. These builds are performed by the **Docker Trusted Build** service.
 
+https://registry.hub.docker.com/u/novacoast/opensuse-apache/
+
 ```bash
 docker pull novacoast/opensuse-apache:latest
 ```
