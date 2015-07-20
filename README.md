@@ -9,7 +9,7 @@ Demo
 - [Quick Start](#quick-start)
 - [Installation](#installation)
 - [Upgrading](#upgrading)
-- [Fig](#fig)
+- [Docker Compose](#docker-compose)
 - [Contributing](#contributing)
 
 # Introduction
@@ -68,15 +68,15 @@ docker pull novacoast/opensuse-apache:latest
 docker run --name='opensuse-apache' -d -p 80:80 novacoast/opensuse-apache
 ```
 
-# Fig
+# Docker-Compose
 
-Build and run using [Fig](http://www.fig.sh)
+Build and run using [docker-compose](https://github.com/docker/compose)
 
 ```bash
 git clone https://github.com/novacoast/opensuse-apache-docker.git
 cd opensuse-apache-docker
-fig build
-fig up
+docker-compose build
+docker-compose up
 ```
 
 The [webapp](webapp) folder on the host will be mounted into the container's apache root
