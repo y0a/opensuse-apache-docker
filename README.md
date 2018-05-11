@@ -5,7 +5,7 @@ Demo
 # Table of Contents
 
 - [Introduction](#introduction)
-  - [Features](#features)
+- [Features](#features)
 - [Quick Start](#quick-start)
 - [Installation](#installation)
 - [Upgrading](#upgrading)
