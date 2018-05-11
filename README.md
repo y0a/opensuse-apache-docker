@@ -29,7 +29,7 @@ rcdocker start
 
 # Introduction
 
-Dockerfile to build an OpenSUSE 13.2 container image with apache2 and php5.
+Dockerfile to build an OpenSUSE Leep 42.3 container image with apache2 and php5.
 
 ## Features:
 - Apache2
