@@ -12,6 +12,9 @@ Demo
 - [Docker Compose](#docker-compose)
 - [Contributing](#contributing)
 - [need_to_install](#need_to_install)
+- [start_service](#start_service)
+
+
 
 
 # need_to_install:
@@ -19,6 +22,11 @@ Demo
 zypper -n in docker
 zypper -n in git
 ```
+# start_service:
+```bash
+rcdocker start
+```
+
 # Introduction
 
 Dockerfile to build an OpenSUSE 13.2 container image with apache2 and php5.
