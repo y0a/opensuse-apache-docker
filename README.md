@@ -26,7 +26,7 @@ Dockerfile to build an OpenSUSE 13.2 container image with apache2 and php5.
 Run the opensuse-apache-docker image
 
 ```bash
-docker run -d -p 80:80 novacoast/opensuse-apache
+docker run -d -p 80:80 nu11secur1ty/opensuse-apache
 ```
 # Installation
 
