@@ -32,16 +32,16 @@ docker run -d -p 80:80 nu11secur1ty/opensuse-apache
 
 Pull the latest version of the image from the docker index. These builds are performed by the **Docker Trusted Build** service.
 
-https://registry.hub.docker.com/u/novacoast/opensuse-apache/
+https://hub.docker.com/r/nu11secur1ty/opensuse-apache/
 
 ```bash
-docker pull novacoast/opensuse-apache:latest
+docker pull nu11secur1ty/opensuse-apache:latest
 ```
 
 Alternately you can build the image yourself.
 
 ```bash
-git clone https://github.com/novacoast/opensuse-apache-docker.git
+git clone https://github.com/nu11secur1ty/opensuse-apache-docker.git
 cd opensuse-apache-docker
 docker build -t="$USER/opensuse-apache" .
 ```
@@ -59,13 +59,13 @@ docker stop opensuse-apache
 - **Step 2**: Update the docker image.
 
 ```bash
-docker pull novacoast/opensuse-apache:latest
+docker pull nu11secur1ty/opensuse-apache:latest
 ```
 
 - **Step 3**: Start the image
 
 ```bash
-docker run --name='opensuse-apache' -d -p 80:80 novacoast/opensuse-apache
+docker run --name='opensuse-apache' -d -p 80:80 nu11secur1ty/opensuse-apache
 ```
 
 # Docker-Compose
@@ -73,7 +73,7 @@ docker run --name='opensuse-apache' -d -p 80:80 novacoast/opensuse-apache
 Build and run using [docker-compose](https://github.com/docker/compose)
 
 ```bash
-git clone https://github.com/novacoast/opensuse-apache-docker.git
+git clone https://github.com/nu11secur1ty/opensuse-apache-docker.git
 cd opensuse-apache-docker
 docker-compose build
 docker-compose up
