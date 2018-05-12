@@ -47,6 +47,13 @@ docker pull nu11secur1ty/opensuse-apache
 ```bash
 docker run -d -p 80:80 nu11secur1ty/opensuse-apache
 ```
+- Output
+```bash 
+http://localhost/
+```
+![](https://github.com/nu11secur1ty/opensuse-apache-docker/blob/master/Screenshot%20from%202018-05-12%2020-12-08.png)
+
+
 # Installation
 
 Pull the latest version of the image from the docker index. These builds are performed by the **Docker Trusted Build** service.
