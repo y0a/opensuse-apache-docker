@@ -280,7 +280,11 @@ This guide covers some of the common commands used to remove images, containers,
 
 # Vulnerabilities
 
+![](https://github.com/nu11secur1ty/opensuse-apache-docker/blob/master/Screenshot%20from%202018-05-12%2020-31-11.png)
 
+# Packages providing
+
+![](https://github.com/nu11secur1ty/opensuse-apache-docker/blob/master/Screenshot%20from%202018-05-12%2020-32-12.png)
 
 
 
