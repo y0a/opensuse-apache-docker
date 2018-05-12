@@ -53,6 +53,15 @@ http://localhost/
 ```
 ![](https://github.com/nu11secur1ty/opensuse-apache-docker/blob/master/Screenshot%20from%202018-05-12%2020-12-08.png)
 
+# Check for running containers:
+```bash
+docker container ls
+docker ps -a
+```
+# Check for building images:
+```bash
+docker images
+```
 
 # Installation
 
