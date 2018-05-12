@@ -275,3 +275,6 @@ docker rm -v container_name
 # Conclusion
 
 This guide covers some of the common commands used to remove images, containers, and volumes with Docker. There are many other combinations and flags that can be used with each. For a comprehensive guide to what's available, see the Docker documentation for docker system prune, docker rmi, docker rm and docker volume rm. If there are common cleanup tasks you'd like to see in the guide, please ask or make suggestions in the comments.
+
+
+# Good luck to everyone! ;)
