@@ -142,11 +142,11 @@ Docker images consist of multiple layers. Dangling images are layers that have n
 ```txt
 If you build an image without tagging it, the image will appear on the list of dangling images because it has no association with a tagged image. You can avoid this situation by providing a tag when you build, and you can retroactively tag an images with the docker tag command.
 ```
-- List:
+- **List:**
 ```bash
 docker images -f dangling=true
 ```
-- Remove:
+- **Remove:**
 ```
 docker images purge
 ```
@@ -154,24 +154,24 @@ docker images purge
 
 You can find all the images that match a pattern using a combination of docker images and grep. Once you're satisfied, you can delete them by using awk to pass the IDs to docker rmi. Note that these utilities are not supplied by Docker and are not necessarily available on all systems:
 
-- List:
+- **List:**
 ```bash
 docker images -a |  grep "pattern"
 ```
 
-- Remove:
+- **Remove:**
 ```bash
 docker images -a | grep "pattern" | awk '{print $3}' | xargs docker rmi
 ```
-- Remove all images
+# Remove all images
 
 All the Docker images on a system can be listed by adding -a to the docker images command. Once you're sure you want to delete them all, you can add the -q flag to pass the Image ID to docker rmi:
 
-- List:
+- **List:**
 ```bash
 docker images -a
 ```
-- Remove:
+- **Remove:**
 ```bash
 docker rmi $(docker images -a -q)
 ```
@@ -179,7 +179,7 @@ docker rmi $(docker images -a -q)
 
 If you know when you’re creating a container that you won’t want to keep it around once you’re done, you can run docker run --rm to automatically delete it when it exits.
 
-- Run and Remove:
+- **Run and Remove:**
 ```bash
  docker run --rm image_name
 ```
@@ -187,11 +187,11 @@ If you know when you’re creating a container that you won’t want to keep it 
 
 You can locate containers using docker ps -a and filter them by their status: created, restarting, running, paused, or exited. To review the list of exited containers, use the -f flag to filter based on status. When you've verified you want to remove those containers, using -q to pass the IDs to the docker rm command.
 
-- List:
+- **List:**
 ```bash
 docker ps -a -f status=exited
 ```
-- Remove:
+- **Remove:**
 ```bash
 docker rm $(docker ps -a -f status=exited -q)
 ```
@@ -199,11 +199,11 @@ docker rm $(docker ps -a -f status=exited -q)
 
 Docker filters can be combined by repeating the filter flag with an additional value. This results in a list of containers that meet either condition. For example, if you want to delete all containers marked as either Created (a state which can result when you run a container with an invalid command) or Exited, you can use two filters:
 
-- List:
+- **List:**
 ```bash
 docker ps -a -f status=exited -f status=created
 ```
-- Remove:
+- **Remove:**
 ```bash
 docker rm $(docker ps -a -f status=exited -f status=created -q)
 ```
@@ -211,11 +211,11 @@ docker rm $(docker ps -a -f status=exited -f status=created -q)
 
 You can find all the containers that match a pattern using a combination of docker ps and grep. When you're satisfied that you have the list you want to delete, you can use awk and xargs to supply the ID to docker rmi. Note that these utilities are not supplied by Docker and not necessarily available on all systems:
 
-- List:
+- **List:**
 ```bash
 docker ps -a |  grep "pattern”
 ```
-- Remove:
+- **Remove:**
 ```bash
 docker ps -a | grep "pattern" | awk '{print $3}' | xargs docker rmi
 ```
@@ -223,11 +223,11 @@ docker ps -a | grep "pattern" | awk '{print $3}' | xargs docker rmi
 
 You can review the containers on your system with docker ps. Adding the -a flag will show all containers. When you're sure you want to delete them, you can add the -q flag to supply the IDs to the docker stop and docker rm commands:
 
-- List:
+- **List:**
 ```bash
 docker ps -a
 ```
-- Remove:
+- **Remove:**
 ```bash
 docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
@@ -237,11 +237,11 @@ Remove one or more specific volumes - Docker 1.9 and later
 
 Use the docker volume ls command to locate the volume name or names you wish to delete. Then you can remove one or more volumes with the docker volume rm command:
 
-- List:
+- **List:**
 ```bash
 docker volume ls
 ```
-- Remove:
+- **Remove:**
 ```bash
 docker volume rm volume_name volume_name
 ```
@@ -249,11 +249,11 @@ docker volume rm volume_name volume_name
 
 Since the point of volumes is to exist independent from containers, when a container is removed, a volume is not automatically removed at the same time. When a volume exists and is no longer connected to any containers, it's called a dangling volume. To locate them to confirm you want to remove them, you can use the docker volume ls command with a filter to limit the results to dangling volumes. When you're satisfied with the list, you can remove them all with docker volume prune:
 
-- List:
+- **List:**
 ```bash
 docker volume ls -f dangling=true
 ```
-- Remove:
+- **Remove:**
 ```
 docker volume prune
 ```
@@ -261,7 +261,7 @@ docker volume prune
 
 If you created an unnamed volume, it can be deleted at the same time as the container with the -v flag. Note that this only works with unnamed volumes. When the container is successfully removed, its ID is displayed. Note that no reference is made to the removal of the volume. If it is unnamed, it is silently removed from the system. If it is named, it silently stays present.
 
-- Remove:
+- **Remove:**
 ```bash
 docker rm -v container_name
 ```
