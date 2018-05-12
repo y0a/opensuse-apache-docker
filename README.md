@@ -38,11 +38,11 @@ Dockerfile to build an OpenSUSE 13.2 container image with apache2 and php5.
 
 # Quick Start
 
-Pull image from docker
+- Pull image from docker
 ```bash
 docker pull nu11secur1ty/opensuse-apache
 ```
-Run the opensuse-apache-docker image
+- Run the opensuse-apache-docker image
 
 ```bash
 docker run -d -p 80:80 nu11secur1ty/opensuse-apache
