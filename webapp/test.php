@@ -1,11 +1,5 @@
 <?php
-	if(isset($_POST['sbm'])){
-		if(empty($_POST['uname'])){
-			echo "opa";
-		}else {
-			echo "<script>alert('Hello ".$_POST['uname']."');</script>"
-		}
-	}
+	phpinfo();
  ?>
 <!DOCTYPE html>
 <html>
