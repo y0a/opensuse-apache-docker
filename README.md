@@ -40,18 +40,18 @@ Dockerfile to build an OpenSUSE 13.2 container image with apache2 and php5.
 
 - Pull image from docker
 ```bash
-docker pull nu11secur1ty/opensuse-apache
+docker pull y0anc0de/opensuse-apache
 ```
 - Run the opensuse-apache-docker image
 
 ```bash
-docker run -d -p 80:80 nu11secur1ty/opensuse-apache
+docker run -d -p 80:80 y0anc0de/opensuse-apache
 ```
 - Output
 ```bash 
 http://localhost/
 ```
-![](https://github.com/nu11secur1ty/opensuse-apache-docker/blob/master/Screenshot%20from%202018-05-13%2002-37-09.png)
+![](https://github.com/y0anc0de/opensuse-apache-docker/blob/master/Screenshot%20from%202018-05-13%2002-37-09.png)
 
 # Check for docker running containers:
 ```bash
@@ -67,16 +67,16 @@ docker images
 
 Pull the latest version of the image from the docker index. These builds are performed by the **Docker Trusted Build** service.
 
-https://hub.docker.com/r/nu11secur1ty/opensuse-apache/
+https://github.com/y0a/opensuse-apache-docker
 
 ```bash
-docker pull nu11secur1ty/opensuse-apache:latest
+docker pull y0anc0de/opensuse-apache:latest
 ```
 
 Alternately you can build the image yourself.
 
 ```bash
-git clone https://github.com/nu11secur1ty/opensuse-apache-docker.git
+git clone https://github.com/y0a/opensuse-apache-docker.git
 cd opensuse-apache-docker
 docker build -t="$USER/opensuse-apache" .
 ```
@@ -94,13 +94,13 @@ docker stop opensuse-apache
 - **Step 2**: Update the docker image.
 
 ```bash
-docker pull nu11secur1ty/opensuse-apache:latest
+docker pull y0ancode/opensuse-apache:latest
 ```
 
 - **Step 3**: Start the image
 
 ```bash
-docker run --name='opensuse-apache' -d -p 80:80 nu11secur1ty/opensuse-apache
+docker run --name='opensuse-apache' -d -p 80:80 y0anc0de/opensuse-apache
 ```
 
 # Docker-Compose
@@ -108,7 +108,7 @@ docker run --name='opensuse-apache' -d -p 80:80 nu11secur1ty/opensuse-apache
 Build and run using [docker-compose](https://github.com/docker/compose)
 
 ```bash
-git clone https://github.com/nu11secur1ty/opensuse-apache-docker.git
+git clone https://github.com/y0a/opensuse-apache-docker.git
 cd opensuse-apache-docker
 docker-compose build
 docker-compose up
